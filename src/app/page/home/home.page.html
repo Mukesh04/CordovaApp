@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title (click)="homePage()">Sinar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../../assets/icon/admin.jpg" alt="">
+      </ion-avatar>
+      <ion-label>
+        <h1>Mukesh Jain</h1>
+        <p>Gathered <span class="money">$ 150000</span></p>
+      </ion-label>
+    </ion-item> 
+  </ion-list>
+
+  <!-- <app-pickup-call-card [hasHeader]="true" [hasFooter]="true" status="hold" updateAt="25-05-2022 16:20" createdAt="23-05-2022" notes="we have two bags that are full one with plastic and other with glass"></app-pickup-call-card> -->
+
+  <app-pickup-call-card status="hold" updatedAt="26/05/2022 15:00:01" createdAt="26/05/2022 15:00:01"
+  notes="we have only two glass of water">
+    <ion-card-header header>
+      <ion-card-subtitle>Last Pick Up Call </ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="success" fill="clear" size="full" footer (click)="seePickupCall()">See All ....</ion-button>
+  </app-pickup-call-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed"  (click)="goToNewPickupCall()">
+    <ion-fab-button color="success">
+      <ion-icon name="Add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-button color="primary" fill="clear" size="full" footer (click)="getLocation()">Get Location</ion-button>
+
+</ion-content>
